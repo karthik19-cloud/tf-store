@@ -1,10 +1,10 @@
 provider "google" {
-	version = "3.5.0"
-	credentials = file("cloudworks-252411-74141a6894a2.json")
+	version = "3.5.0"	
 	project = "cloudworks-252411"
 	region  = "us-central1"
 	zone    = "us-central1-c"	
 }
+#credentials = file("cloudworks-252411-74141a6894a2.json")
 
 # Our logged compute instance
 resource "google_compute_instance" "my-logged-instance" {
