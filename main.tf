@@ -1,5 +1,6 @@
 provider "google" {
 	version = "3.5.0"	
+	credentials = file("cloudworks-252411-74141a6894a2.json")
 	project = "cloudworks-252411"
 	region  = "us-central1"
 	zone    = "us-central1-c"	
