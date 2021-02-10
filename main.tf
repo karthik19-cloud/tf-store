@@ -1,3 +1,11 @@
+terraform {
+  backend "gcs"{
+    bucket      = "istudio"
+    prefix      = "dev"
+    #credentials = "credentials.json"
+  }
+}
+
 provider "google" {
 	version = "3.5.0"	
 	#credentials = file("cloudworks-252411-74141a6894a2.json")
@@ -13,6 +21,8 @@ resource "google_compute_instance" "my-logged-instance" {
   machine_type = "e2-medium"
   zone         = "us-central1-c"
 
+  tags = ["foo", "bar", "network"]
+	
   boot_disk {
     initialize_params {
       image = "debian-cloud/debian-9"
