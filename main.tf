@@ -1,3 +1,11 @@
+terraform {
+  backend "gcs"{
+    bucket      = "istudio"
+    prefix      = "dev"
+    #credentials = "credentials.json"
+  }
+}
+
 provider "google" {
 	version = "3.5.0"	
 	#credentials = file("cloudworks-252411-74141a6894a2.json")
